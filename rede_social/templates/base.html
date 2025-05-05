@@ -6,10 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="base">
-        {% include "partials/navbar.html" %}
-
+    {% include "partials/navbar.html" %}
+    {% include "partials/friendship_list.html" %}
+    <main class="base">
         {% block content %}{% endblock %}
-    </div>
+    </main>
 </body>
 </html>

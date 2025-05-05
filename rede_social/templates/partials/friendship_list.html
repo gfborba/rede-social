@@ -1,0 +1,11 @@
+<aside>
+    {% if friends %}
+      <ul>
+        {% for friend in friends %}
+          <li>{{ friend.username }}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>Você ainda não tem amigos cadastrados.</p>
+    {% endif %}
+  </aside>
