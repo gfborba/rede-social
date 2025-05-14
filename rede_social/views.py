@@ -1,11 +1,17 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 from .models import Post, Friendship, Invite
 
+@login_required(login_url='login')
 def index(request):
     posts = Post.objects.all().order_by('-id')
 
     friendship = Friendship.objects.filter(user=request.user).first()
-    friends = friendship.friends.all()
+    if friendship:
+        friends = friendship.friends.all()
+    else:
+        friends = []
+
 
     return render(request, 'pages/index.html', {'posts':posts,'friends': friends})
 
