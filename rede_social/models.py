@@ -47,18 +47,18 @@ class Invite(models.Model):
         return self.sender.username
     
 
-class ChatRoom(models.Model):
-    name = models.CharField(max_length=255)
-    user_1 = models.ForeignKey(User, on_delete=models.CASCADE, related_name='sender')
-    user_2 = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reciver')
+# class ChatRoom(models.Model):
+#     name = models.CharField(max_length=255)
+#     user_1 = models.ForeignKey(User, on_delete=models.CASCADE, related_name='sender')
+#     user_2 = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reciver')
     
 
-ChatRoom.objects.filter('user_1euser2')
+# ChatRoom.objects.filter('user_1euser2')
 
-class Message(models.Model):
-    sender = models.ForeignKey(User, on_delete=models.CASCADE, related_name='sender')
-    content = models.TextField()
-    create_at = models.DateTimeField()
+# class Message(models.Model):
+#     sender = models.ForeignKey(User, on_delete=models.CASCADE, related_name='sender')
+#     content = models.TextField()
+#     create_at = models.DateTimeField()
 
 # class Message(models.Model):
 #     sender = models.ForeignKey(User, on_delete=models.CASCADE, related_name='sender')
