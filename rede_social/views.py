@@ -15,6 +15,11 @@ def index(request):
 
     return render(request, 'pages/index.html', {'posts':posts,'friends': friends})
 
+@login_required(login_url='login')
+def post_detail(request, id):
+    post = Post.objects.get(id=id)
+    return render(request, 'pages/post_detail.html', {'post': post})
+
 # def envio_de_convites(request):
 #     pass
 

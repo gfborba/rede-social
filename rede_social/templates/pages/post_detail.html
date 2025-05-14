@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+    {% block content %}
+        <h1>Detalhes do post</h1>
+        <p>{{ post.title }}</p>
+        <p>{{ post.content }}</p>
+        {% if post.image %}
+            <img src="{{ post.image.url }}" alt="Imagem do post" style="max-width:300px;"><br>
+        {% endif %}
+        <p>{{ post.created_at|date:'d/m H:m' }}</p>
+        <p>{{ post.user }}</p>
+        
+    {% endblock %}

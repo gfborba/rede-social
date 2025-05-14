@@ -18,6 +18,7 @@
             {% endif %}
             <p>{{ post.created_at|date:'d/m H:m' }}</p>
             <p>{{ post.user }}</p>
+            <a href="{% url 'post_detail' post.id %}">Ver mais</a>
         {% endfor %}
         
     {% endblock %}
