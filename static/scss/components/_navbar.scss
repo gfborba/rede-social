@@ -1,15 +1,21 @@
 .navbar{
+    grid-area: navbar;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: $roxo-escuro1;
+
     ul{
         list-style: none;
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        padding: 10px;
-        
+        gap: 20px;
+
         li{
             a{
                 text-decoration: none;
-                color: red;
+                color: white;
             }
         }
     }

@@ -7,10 +7,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="{% sass_src 'scss/base.scss' %}" type="text/css">
 </head>
-<body>
+<body class="base">
     {% include "partials/navbar.html" %}
     {% include "partials/friendship_list.html" %}
-    <main class="base">
+    <main class="main-content">
         {% block content %}{% endblock %}
     </main>
 </body>

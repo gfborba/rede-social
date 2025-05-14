@@ -3,14 +3,32 @@
   padding: 0px;
   box-sizing: border-box; }
 
-.navbar ul {
-  list-style: none;
+.navbar {
+  grid-area: navbar;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px; }
-  .navbar ul li a {
-    text-decoration: none;
-    color: red; }
+  padding: 20px;
+  background-color: #63458A; }
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px; }
+    .navbar ul li a {
+      text-decoration: none;
+      color: white; }
+
+.main-content {
+  grid-area: main; }
+
+.friendship-list {
+  grid-area: friendship-list; }
+
+.base {
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "navbar navbar" "friendship-list main"; }
 
 /*# sourceMappingURL=base.css.map */

@@ -4,4 +4,17 @@
     box-sizing: border-box;
 }
 
+@import 'vars';
 @import 'components/navbar';
+@import 'components/main_content';
+@import 'components/friendship_list';
+
+.base{
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+    "navbar navbar"
+    "friendship-list main";
+    
+}
