@@ -1,0 +1,16 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; }
+  .navbar ul li a {
+    text-decoration: none;
+    color: red; }
+
+/*# sourceMappingURL=base.css.map */
