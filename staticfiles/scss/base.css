@@ -25,6 +25,14 @@
 .friendship-list {
   grid-area: friendship-list; }
 
+.post {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9; }
+
 .base {
   display: grid;
   grid-template-columns: 1fr 8fr;

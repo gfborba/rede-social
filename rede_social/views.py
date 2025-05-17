@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from .models import Post, Friendship, Invite
 
@@ -19,6 +19,23 @@ def index(request):
 def post_detail(request, id):
     post = Post.objects.get(id=id)
     return render(request, 'pages/post_detail.html', {'post': post})
+
+@login_required(login_url='login')
+def create_post(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        content = request.POST.get('content')
+        image = request.FILES.get('image')
+        
+        post = Post.objects.create(
+            user=request.user,
+            title=title,
+            content=content,
+            image=image
+        )
+        return redirect('index')
+    
+    return render(request, 'pages/create_post.html')
 
 # def envio_de_convites(request):
 #     pass

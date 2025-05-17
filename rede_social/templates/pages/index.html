@@ -1,17 +1,16 @@
-
-    {% extends "base.html" %}
-    {% block content %}
-        <h1>POSTAGENS</h1>
-        
-        {% for post in posts %}
-            <p>{{ post.title }}</p>
-            <p>{{ post.content }}</p>
-            {% if post.image %}
-                <img src="{{ post.image.url }}" alt="Imagem do post" style="max-width:300px;"><br>
-            {% endif %}
-            <p>{{ post.created_at|date:'d/m H:m' }}</p>
-            <p>{{ post.user }}</p>
-            <a href="{% url 'post_detail' post.id %}">Ver mais</a>
-        {% endfor %}
-        
-    {% endblock %}
+{% extends "base.html" %}
+{% block content %}
+    <h1>POSTAGENS</h1>
+    <button>Criar post</button>
+    {% for post in posts %}
+        <p>{{ post.title }}</p>
+        <p>{{ post.content }}</p>
+        {% if post.image %}
+            <img src="{{ post.image.url }}" alt="Imagem do post" style="max-width:300px;"><br>
+        {% endif %}
+        <p>{{ post.created_at|date:'d/m H:m' }}</p>
+        <p>{{ post.user }}</p>
+        <a href="{% url 'post_detail' post.id %}">Ver mais</a>
+    {% endfor %}
+    
+{% endblock %}
